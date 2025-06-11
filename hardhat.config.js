@@ -11,8 +11,17 @@ module.exports = {
     }
   },
   networks: {
-    sepolia: {
-      url: process.env.RPC_URL
+    baklava: {
+      url: "https://baklava-forno.celo-testnet.org",
+      chainId: 62320,
+    },
+    alfajores: {
+      url: "https://alfajores-forno.celo-testnet.org",
+      chainId: 44787,
+    },
+    celo: {
+      url: "https://forno.celo.org",
+      chainId: 42220,
     },
   },
 };

@@ -36,7 +36,7 @@ const main = async () => {
   const currentNonce = await ethers.provider.getTransactionCount(wallet.address);
 
   const authorizationData = {
-    chainId: '0xaa36a7',
+    chainId: ethers.toBeHex(network.config.chainId),
     address: BATCH_CALL_DELEGATION_ADDRESS,
     nonce: ethers.toBeHex(currentNonce + 1),
   }

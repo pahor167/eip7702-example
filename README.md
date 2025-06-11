@@ -27,23 +27,24 @@ npm install
 
 # Configure .env file
 PRIVATE_KEY="your_private_key"
-RPC_URL="https://sepolia.infura.io/v3/YOUR-PROJECT-ID"
 RECIPIENT_ADDRESS="your_recipient_address"
 
 # Step 1: Deploy the contract
-npx hardhat run scripts/deployBatchCallDelegation.js --network sepolia
+npx hardhat run scripts/deployBatchCallDelegation.js --network baklava
+or
+npx hardhat run scripts/deployBatchCallDelegation.js --network alfajores
+or
+npx hardhat run scripts/deployBatchCallDelegation.js --network celo
 
 # Step 2: Execute batch calls
-npx hardhat run scripts/executeBatchCallDelegation.js --network sepolia
+npx hardhat run scripts/executeBatchCallDelegation.js --network baklava
+or
+npx hardhat run scripts/executeBatchCallDelegation.js --network alfajores
+or
+npx hardhat run scripts/executeBatchCallDelegation.js --network celo
 ```
 
 During deployment, a `deployments/{network}.json` file will be created containing the deployed contract address and related information. The execution script then uses this deployment information to perform the batch calls.
-
-## Testnet Information
-
-This project is tested on Sepolia testnet:
-- Chain ID: 11155111
-- RPC URL: https://sepolia.infura.io/v3/YOUR-PROJECT-ID
 
 ## Contract Structure
 
